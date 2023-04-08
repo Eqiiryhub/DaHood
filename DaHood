@@ -1,0 +1,66 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("EqiiryHub | DaHood", "Synapse")
+
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("EqiiryHub | Main")
+Section:NewToggle("Fly", "Toggle to fly", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Noclip", "Toggle to noclip", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewToggle("Aimlock", "Toggle to Aimlock", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+Section:NewSlider("Speed", "Change your speed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+Section:NewSlider("Jump Power", "Change your jump power", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpHeight = s
+end)
+
+
+
+
+
+
+local Tab = Window:NewTab("Side")
+local Section = Tab:NewSection("EqiiryHub | Side")
+
+local Tab = Window:NewTab("Target")
+local Section = Tab:NewSection("EqiiryHub | Target")
+
+local Tab = Window:NewTab("Toggles")
+local Section = Tab:NewSection("EqiiryHub | Toggles")
+
+local Tab = Window:NewTab("Teleport")
+local Section = Tab:NewSection("EqiiryHub | Teleports")
+
+local Tab = Window:NewTab("Auto Buy")
+local Section = Tab:NewSection("EqiiryHub | Auto Buys")
+
+local Tab = Window:NewTab("Extra")
+local Section = Tab:NewSection("EqiiryHub | Extras")
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+Section:NewColorPicker("Color Text", "Color Info", Color3.fromRGB(0,0,0), function(color)
+    print(color)
+    -- Second argument is the default color
+end)
+Section:NewDropdown("Version", "DropdownInf", {"1.0.0", "1.0.1", "1.0.2"}, function(currentOption)
+    print(currentOption)
+end)
