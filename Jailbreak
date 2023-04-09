@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("EqiiryHub | DaHood", "Synapse")
+local Window = Library.CreateLib("EqiiryHub | Jailbreak", "Synapse")
 
 
 local Tab = Window:NewTab("Main")
@@ -37,22 +37,17 @@ end)
 
 
 
-local Tab = Window:NewTab("Side")
+local Tab = Window:NewTab("Toggles")
 local Section = Tab:NewSection("EqiiryHub | Side")
 
-local Tab = Window:NewTab("Target")
+local Tab = Window:NewTab("Autofarm")
 local Section = Tab:NewSection("EqiiryHub | Target")
 
-local Tab = Window:NewTab("Toggles")
+local Tab = Window:NewTab("Teleports")
 local Section = Tab:NewSection("EqiiryHub | Toggles")
 
-local Tab = Window:NewTab("Teleport")
-local Section = Tab:NewSection("EqiiryHub | Teleports")
-
-local Tab = Window:NewTab("Auto Buy")
-local Section = Tab:NewSection("EqiiryHub | Auto Buys")
-
 local Tab = Window:NewTab("Extra")
+Section:NewLabel("Created By: Eqiiry#1337")
 local Section = Tab:NewSection("EqiiryHub | Extras")
 Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.F, function()
 	Library:ToggleUI()
